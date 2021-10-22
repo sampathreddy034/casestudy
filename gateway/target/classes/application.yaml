@@ -1,0 +1,17 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: ZuulGateway
+
+zuul:
+  routes:
+    washer-service:
+      url: http://localhost:9001
+
+    order-service:
+      url: http://localhost:8095
+
+    user-service:
+      url: http://localhost:8090
